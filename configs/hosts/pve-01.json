@@ -1,0 +1,16 @@
+{
+    "proxmox": {
+        "enabled": true,
+        "role": "compute"
+    },
+    "system": {
+        "packages": [
+            "curl",
+            "htop",
+            "vim",
+            "net-tools",
+            "pve-manager",
+            "ifupdown2"
+        ]
+    }
+}

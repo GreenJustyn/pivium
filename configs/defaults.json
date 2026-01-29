@@ -1,0 +1,20 @@
+{
+    "version": "1.0.0",
+    "cluster_name": "alpha-cluster",
+    "update_policy": "maintenance_window",
+    "system": {
+        "timezone": "UTC",
+        "packages": [
+            "curl",
+            "htop",
+            "vim",
+            "net-tools"
+        ]
+    },
+    "proxmox": {
+        "enabled": false
+    },
+    "ceph": {
+        "enabled": false
+    }
+}
