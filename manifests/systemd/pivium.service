@@ -1,0 +1,11 @@
+[Unit]
+Description=Pivium Infrastructure Reconciler
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/pivium
+ExecStart=/usr/local/bin/pivium -mode reconcile
+StandardOutput=journal
+StandardError=journal

@@ -1,0 +1,15 @@
+[Unit]
+Description=Pivium Updater Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/pivium-updater
+Restart=on-failure
+# Environment variable for the webhook secret
+# You should create this file with:
+# echo "PIVIUM_UPDATER_SECRET=your_super_secret_token" > /etc/pivium/updater.conf
+EnvironmentFile=-/etc/pivium/updater.conf
+
+[Install]
+WantedBy=multi-user.target
